@@ -17,6 +17,7 @@ import java.util.Map;
 @RequestMapping("/brand")
 public class BrandController {
 
+
     @Autowired
     private BrandService brandService;
 
@@ -25,7 +26,9 @@ public class BrandController {
     //@RequestMapping("/findAll.do")
     public Result findAll(){
         List<Brand> brandList = brandService.findAll();
+        System.out.println("333");
         return new Result(true,2000,"成功",brandList);
+
     }
 
     //根据id查询
